@@ -1374,7 +1374,7 @@ emailField.addEventListener("input", () => {
 
 <div class="form-row">
   <label for="service">Service Interested In</label>
-  <select id="service" class="select-box" required>
+  <select id="service" name="service" class="select-box" required>
     <option value="">-- Select a service --</option>
     <option value="online-yoga">Online Yoga</option>
     <option value="astrology">Astrology</option>
@@ -1727,11 +1727,11 @@ if (contactForm) {
 
     // ---- CUSTOM VALIDATION START ----
 
-const nameValue    = contactForm.name.value.trim();
-const phoneValue   = contactForm.phone.value.trim();
-const emailValue   = contactForm.email.value.trim();
-const serviceValue = contactForm.service.value.trim();
-const messageValue = contactForm.message.value.trim();
+const nameValue = document.getElementById('name').value.trim();
+const phoneValue = document.getElementById('Mobile').value.trim();
+const emailValue = document.getElementById('email').value.trim();
+const serviceValue = document.getElementById('service').value.trim();
+const messageValue = document.getElementById('message').value.trim();
 
 const phoneRegex = /^[0-9]{10}$/;
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[^0-9][a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
